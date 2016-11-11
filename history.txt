@@ -1,0 +1,430 @@
+    1  mkdir images
+    2  soure admin.rc
+    3  ls
+    4  source admin.rc
+    5  cd images
+    6  wget http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img
+    7  openstack image create "cirros" --file cirros-0.3.4-x86_64-disk.img --disk-format qcow2 --container-format bare --public
+    8  wget https://cloud-images.ubuntu.com/releases/16.04/release-20160825/ubuntu-16.04-server-cloudimg-amd64-disk1.img
+    9  openstack image create "ubuntu-16.04-server" --file ubuntu-16.04-server-cloudimg-amd64-disk1.img --disk-format qcow2 --container-format bare --public
+   10  cd
+   11  cd .ssh
+   12  cat rsa_p
+   13  ls
+   14  cat id_rsa.pub
+   15  exit
+   16  ssh ubuntu@172.6.2.52
+   17  ssh ubuntu@172.16.2.52
+   18  keystone
+   19  source admin.rc
+   20  openstack flavor list
+   21  exit
+   22  ls
+   23  ls admin.rc
+   24  cat admin.rc
+   25  soure admin.rc
+   26  source admin.rc
+   27  openstack service create --name image --type photo --description "my cool photo service"
+   28  openstack service create --name image --description "my cool photo service" photo
+   29  openstack endpoint create --service-id 55daf7a967aa40a2827827726acf3bed --publicurl http://zachphoto:5151/v2.0 --internalurl http://zachphoto:5151/v2.0 --adminurl http://zachphoto:511/v2.0 --region regionOne
+   30  openstack endpoint create --service-id 55daf7a967aa40a2827827726acf3bed --public http://zachphoto:5151/v2.0 --internal http://zachphoto:5151/v2.0 --admin http://zachphoto:511/v2.0 --region regionOne
+   31  openstack endpoint create --region regionOne 55daf7a967aa40a2827827726acf3bed admin http://admin:51510/v2.0
+   32  openstack endpoint create --region regionOne 55daf7a967aa40a2827827726acf3bed public http://public:51510/v2.0
+   33  openstack endpoint create --region regionOne 55daf7a967aa40a2827827726acf3bed public http://private:51510/v2.0
+   34  openstack endpoint create --region regionOne 55daf7a967aa40a2827827726acf3bed private http://private:51510/v2.0
+   35  openstack endpoint create --region regionOne 55daf7a967aa40a2827827726acf3bed public http://public:51510/v2.0
+   36  openstack catalog list
+   37  openstack service show phot
+   38  openstack service show photo
+   39  openstack help service
+   40  openstack service provider list
+   41  openstack help | grep provider
+   42  exit
+   43  openstack flavor list
+   44  openstack --os-username admin flavor list
+   45  openstack --os-username --os-auth-url http://controller:5000/v3 admin flavor list
+   46  openstack --os-username admin --os-auth-url http://controller:5000/v3 flavor list
+   47  openstack --os-username admin --os-domain-name default --os-auth-url http://controller:5000/v3 flavor list
+   48  source admin.rc
+   49  openstack flavor list
+   50  openstack flavor list --all
+   51  openstack flavor list --long
+   52  openstack flavor list
+   53  ls
+   54  cat admin.rc
+   55  openstack help | grep catalog
+   56  openstack catalog list
+   57  openstack help service create 
+   58  openstack service create --name weatherservice --description "Openstack Weather Service" weather
+   59  openstack catalog list
+   60  openstack help endpoint create
+   61  openstack endpoint create --region RegionOne weatherservice public http://controller:7171
+   62  openstack catalog list
+   63  cat admin.rc
+   64  export PS1="\[\e[33m\]\u\[\e[m\]@\[\e[36m\]\h\[\e[m\] (\[\e[35m\]I am now Zach User\[\e[m\]) :\W\$ "
+   65  export PS1="\[\e[33m\]\u\[\e[m\]@\[\e[36m\]\h\[\e[m\] (\[\e[35m\]admin\[\e[m\]) :\W\$ "
+   66  ls
+   67  source unset.rc
+   68  openstack catalog list
+   69  source admin.rc
+   70  openstack catalog list
+   71  openstack help service create
+   72  openstack service create --name image --description "my cool photo service" photo
+   73  openstack help endpoint create
+   74  cd .ssh
+   75  ls
+   76  cat config
+   77  cat id_rsa.pub
+   78  openstack service list
+   79  openstack help endpoint create
+   80  openstack endpoint create photo admin http://example.org:10103
+   81  openstack service delete 55daf7a967aa40a2827827726acf3bed
+   82  openstack endpoint create photo admin http://example.org:10103
+   83  openstack endpoint create photo public http://example.org:10103
+   84  openstack endpoint create photo internal http://example.org:10103
+   85  openstack service list
+   86  openstack catalog show
+   87  openstack catalog show photo
+   88  openstack catalog list
+   89  cd
+   90  openstack catalog show
+   91  openstack catalog show photo
+   92  flavor image list
+   93  openstack flavor list
+   94  openstack service list
+   95  openstack catalog list
+   96  openstack catalog show
+   97  openstack user list
+   98  openstack help | grep service
+   99  openstack catalog list
+  100  keystone service-list
+  101  openstack service list
+  102  openstack catalog list
+  103  openstack service provider show
+  104  ls
+  105  openstack help
+  106  openstack catalog
+  107  openstack catalog show
+  108  openstack service 
+  109  openstack catalog show
+  110  openstack catalog list
+  111  openstack service create --name photostorage --description "my cool photo service" photo
+  112  openstack catalog list
+  113  openstack endpoint create photo admin http://example.org:10103
+  114  openstack catalog list
+  115  openstack help endpoint delete
+  116  openstack endpoint delete 49e912044d4c490fa13a1608e05a7fe5
+  117  openstack endpoint create --region RegionOne photo admin http://example.org:10103
+  118  openstack catalog list
+  119  openstack service show photo
+  120  openstack enpoint show 
+  121  openstack endppoint list
+  122  openstack endpoint list
+  123  openstack endpoint list | grep photo
+  124  openstack endpoint show photo
+  125  openstack endpoint create --region RegionOne photo internal http://example:10101
+  126  openstack endpoint list
+  127  openstack endpoint list | grep photo
+  128  openstack flavor list --debug
+  129  curl -s -X POST http://192.168.0.10:5000/v2.0/tokens -H "Content-Type: application/json" -d '{"auth":{'username': 'admin', 'project_name': 'admin', 'user_domain_name': 'default', 'auth_url': 'http://controller:35357/v3', 'password': 'alta3', 'project_domain_name': 'default'}}
+  130  '
+  131  curl -s -X POST http://192.168.0.10:5000/v2.0/tokens -H "Content-Type: application/json" -d '{"auth":{'username': 'admin', 'project_name': 'admin', 'user_domain_name': 'default', 'auth_url': 'http://controller:35357/v3', 'password': 'alta3', 'project_domain_name': 'default'}}'
+  132  curl -s -X POST http://192.168.0.10:5000/v2.0/tokens -H "Content-Type: application/json" -d {"auth":{'username': 'admin', 'project_name': 'admin', 'user_domain_name': 'default', 'auth_url': 'http://controller:35357/v3', 'password': 'alta3', 'project_domain_name': 'default'}}
+  133  curl -s -X POST http://192.168.0.10:5000/v2.0/tokens
+  134  curl -s -X POST http://controller:35357/v3/auth/tokens -H "Content-Type: application/json" -d {"auth":{'username': 'admin', 'project_name': 'admin', 'user_domain_name': 'default', 'auth_url': 'http://controller:35357/v3', 'password': 'alta3', 'project_domain_name': 'default'}}
+  135  curl -s -X POST http://controller:35357/v3 -H "Content-Type: application/json" -d {"auth":{'username': 'admin', 'project_name': 'admin', 'user_domain_name': 'default', 'auth_url': 'http://controller:35357/v3', 'password': 'alta3', 'project_domain_name': 'default'}}
+  136  curl -s -X POST http://controller:35357/v3 -H "Content-Type: application/json" -d '{"auth":{"tenantName":"admin","passwordCredentials":{"username":"admin","password":"alta3"}}}'
+  137  curl -i   -H "Content-Type: application/json"   -d '
+  138  { "auth": {
+  139      "identity": {
+  140        "methods": ["password"],
+  141        "password": {
+  142          "user": {
+  143            "name": "admin",
+  144            "domain": { "id": "default" },
+  145            "password": "adminpwd"
+  146          }
+  147        }
+  148      }
+  149    }
+  150  }'   http://localhost:5000/v3/auth/tokens ; echo
+  151  curl -i   -H "Content-Type: application/json"   -d '
+  152  { "auth": {
+  153      "identity": {
+  154        "methods": ["password"],
+  155        "password": {
+  156          "user": {
+  157            "name": "admin",
+  158            "domain": { "id": "default" },
+  159            "password": "alta3"
+  160          }
+  161        }
+  162      }
+  163    }
+  164  }'   http://localhost:5000/v3/auth/tokens ; echo
+  165  curl -i   -H "Content-Type: application/json"   -d '
+  166  { "auth": {
+  167      "identity": {
+  168        "methods": ["password"],
+  169        "password": {
+  170          "user": {
+  171            "name": "admin",
+  172            "domain": { "id": "default" },
+  173            "password": "alta3"
+  174          }
+  175        }
+  176      }
+  177    }
+  178  }'   http://localhost:5000/v3/auth/tokens ; echo
+  179  curl -i   -H "Content-Type: application/json"   -d '
+  180  { "auth": {
+  181      "identity": {
+  182        "methods": ["password"],
+  183        "password": {
+  184          "user": {
+  185            "name": "admin",
+  186            "domain": { "id": "default" },
+  187            "password": "alta3"
+  188          }
+  189        }
+  190      }
+  191    }
+  192  }'   http://controller:5000/v3/auth/tokens ; echo
+  193  curl -i   -H "Content-Type: application/json"   -d '
+  194  { "auth": {
+  195      "identity": {
+  196        "methods": ["password"],
+  197        "password": {
+  198          "user": {
+  199            "name": "admin",
+  200            "domain": { "id": "default" },
+  201            "password": "alta3"
+  202          }
+  203        }
+  204      }
+  205    }
+  206  }'   http://controller:35357/v3/auth/tokens ; echo
+  207  curl -i   -H "Content-Type: application/json"   -d '
+  208  { "auth": {
+  209      "identity": {
+  210        "methods": ["password"],
+  211        "password": {
+  212          "user": {
+  213            "name": "admin",
+  214            "domain": { "id": "default" },
+  215            "password": "adminpwd"
+  216          }
+  217        }
+  218      }
+  219    }
+  220  }'   http://controller:5000/v3/auth/tokens ; echo
+  221  curl -i   -H "Content-Type: application/json"   -d '
+  222  { "auth": {
+  223      "identity": {
+  224        "methods": ["password"],
+  225        "password": {
+  226          "user": {
+  227            "name": "admin",
+  228            "domain": { "id": "default" },
+  229            "password": "adminpwd"
+  230          }
+  231        }
+  232      }
+  233    }
+  234  }'   http://controlsdler:5000/v3/auth/tokens ; echo
+  235  curl -i   -H "Content-Type: application/json"   -d '
+  236  { "auth": {
+  237      "identity": {
+  238        "methods": ["password"],
+  239        "password": {
+  240          "user": {
+  241            "name": "admin",
+  242            "domain": { "id": "default" },
+  243            "password": "adminpwd"
+  244          }
+  245        }
+  246      }
+  247    }
+  248  }'   http://controller:5000/v3/auth/tokens ; echo
+  249  curl -i   -H "Content-Type: application/json"   -d '
+  250  { "auth": {
+  251      "identity": {
+  252        "methods": ["password"],
+  253        "password": {
+  254          "user": {
+  255            "name": "admin",
+  256            "domain": { "id": "default" },
+  257            "password": "alta3"
+  258          }
+  259        }
+  260      }
+  261    }
+  262  }'   http://controller:5000/v3/auth/tokens ; echo
+  263  curl -i   -H "Content-Type: application/json"   -d '
+  264  { "auth": {
+  265      "identity": {
+  266        "methods": ["password"],
+  267        "password": {
+  268          "user": {
+  269            "name": "admin",
+  270            "domain": { "id": "default" },
+  271            "password": "adminpwd"
+  272          }
+  273        }
+  274      },
+  275      "scope": {
+  276        "project": {
+  277          "name": "demo",
+  278          "domain": { "id": "default" }
+  279        }
+  280      }
+  281    }
+  282  }'   http://localhost:5000/v3/auth/tokens ; echo
+  283  curl -i   -H "Content-Type: application/json"   -d '
+  284  { "auth": {
+  285      "identity": {
+  286        "methods": ["password"],
+  287        "password": {
+  288          "user": {
+  289            "name": "admin",
+  290            "domain": { "id": "default" },
+  291            "password": "alta3"
+  292          }
+  293        }
+  294      },
+  295      "scope": {
+  296        "project": {
+  297          "name": "admin",
+  298          "domain": { "id": "default" }
+  299        }
+  300      }
+  301    }
+  302  }'   http://localhost:5000/v3/auth/tokens ; echo
+  303  curl -i   -H "Content-Type: application/json"   -d '
+  304  { "auth": {
+  305      "identity": {
+  306        "methods": ["password"],
+  307        "password": {
+  308          "user": {
+  309            "name": "admin",
+  310            "domain": { "id": "default" },
+  311            "password": "alta3"
+  312          }
+  313        }
+  314      },
+  315      "scope": {
+  316        "project": {
+  317          "name": "admin",
+  318          "domain": { "id": "default" }
+  319        }
+  320      }
+  321    }
+  322  }'   http://controller:5000/v3/auth/tokens ; echo
+  323  curl -i   -H "Content-Type: application/json"   -d '
+  324  { "auth": {
+  325      "identity": {
+  326        "methods": ["password"],
+  327        "password": {
+  328          "user": {
+  329            "name": "admin",
+  330            "domain": { "id": "default" },
+  331            "password": "alta3"
+  332          }
+  333        }
+  334      },
+  335      "scope": {
+  336        "project": {
+  337          "name": "admin",
+  338          "domain": { "id": "default" }
+  339        }
+  340      }
+  341    }
+  342  }'   http://controller:5000/v3 ; echo
+  343  curl -i   -H "Content-Type: application/json"   -d '
+  344  { "auth": {
+  345      "identity": {
+  346        "methods": ["password"],
+  347        "password": {
+  348          "user": {
+  349            "name": "admin",
+  350            "domain": { "id": "default" },
+  351            "password": "alta3"
+  352          }
+  353        }
+  354      },
+  355      "scope": {
+  356        "project": {
+  357          "name": "admin",
+  358          "domain": { "id": "default" }
+  359        }
+  360      }
+  361    }
+  362  }'   http://controller:5000/v3/auth/tokens ; echo
+  363  curl -i   -H "Content-Type: application/json"   -d '
+  364  { "auth": {
+  365      "identity": {
+  366        "methods": ["password"],
+  367        "password": {
+  368          "user": {
+  369            "name": "admin",
+  370            "domain": { "id": "default" },
+  371            "password": "alta3"
+  372          }
+  373        }
+  374      },
+  375      "scope": {
+  376        "project": {
+  377          "name": "admin",
+  378          "domain": { "id": "defausdflt" }
+  379        }
+  380      }
+  381    }
+  382  }'   http://controller:5000/v3/auth/tokens ; echo
+  383  history
+  384  openstack help
+  385  openstack flavor list
+  386  nova flavor-list
+  387  openstack server list
+  388  openstack server pause dd68912c-c3c9-470d-83bf-9ae410809090
+  389  openstack server list
+  390  openstack server unpause dd68912c-c3c9-470d-83bf-9ae410809090
+  391  openstack server list
+  392  openstack server pause dd68912c-c3c9-470d-83bf-9ae410809090
+  393  openstack server list
+  394  openstack server resume dd68912c-c3c9-470d-83bf-9ae410809090
+  395  openstack server list
+  396  openstack server unpause dd68912c-c3c9-470d-83bf-9ae410809090
+  397  openstack server suspend dd68912c-c3c9-470d-83bf-9ae410809090
+  398  openstack server list
+  399  nova flavor list
+  400  nova flavor-list
+  401  ssh compute1
+  402  exit
+  403  source admin.rc
+  404  openstack server list --all
+  405  neutron subnet-list
+  406  neutron router-list --all
+  407  neutron subnet-delete provider-subnet
+  408  neutron net-delete demo-net
+  409  neutron subnet-delete provider-subnet
+  410  openstack help | grep port
+  411  openstack help port show
+  412  neutron subnet-delete provider-subnet
+  413  nuetron net-delete provider-net
+  414  neutron net-delete provider-net
+  415  neutron net-create --shared --provider:physical_network provider --provider:network_type flat provider-net
+  416  neutron subnet-create --name provider-subnet --allocation-pool start=172.16.2.50,end=172.16.2.250 --dns-nameserver 10.3.200.1 --gateway 172.16.2.1 provider-net 172.16.2.0/24
+  417  neutron net-create demo-net
+  418  neutron subnet-create --name demo-net_subnet --dns-nameserver 10.3.200.1 --gateway 192.168.30.1 demo-net 192.168.30.0/24
+  419  neutron net-update provider-net --router:external
+  420  neutron router-create demorouter
+  421  ssh compute1
+  422  mkdir myopenstack
+  423  cd myopenstack
+  424  ls
+  425  git init
+  426  ls
+  427  git config --global user.name "Rzfeeser"
+  428  git config --global user.email "rzfeeser@gmail.com"
+  429  history
+  430  history > history.txt
