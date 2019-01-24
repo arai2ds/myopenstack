@@ -1,0 +1,107 @@
+labs:
+- file: 01-vim.md
+  title: Lab 01 - Using Vim
+- file: 02-git.md
+  title: Lab 02 - Making a Github account
+- file: 03-dirhelp.md
+  title: Lab 03 - Getting dir(obj) help() and pydoc
+- file: 04-lists.md
+  title: Lab 04 - Lists
+- file: 05-dict.md
+  title: Lab 05 - Dictionaries
+- file: 06-json.md
+  title: Lab 06 - Python Data to JSON file
+- file: 07-pyyaml.md
+  title: Lab 07 - Python Data to YAML file
+- file: 08-time.md
+  title: Lab 08 - import time
+- file: 09-rpg.md
+  title: Lab 09 - List and Dict Modeling
+- file: 10-tryexcept01.md
+  title: Lab 10 - try and except
+- file: 11-httpServerClient.md
+  title: Lab 11 - Py SimpleHTTPServer and HTTP Client
+- file: 12-spacetff.md
+  title: Lab 12 - RESTful Open APIs
+- file: 13-spacetff2.md
+  title: Lab 13 - APIs and JSON Decode
+- file: 14-requests.md
+  title: Lab 14 - requests library
+- file: 15-nasaapi01.md
+  title: Lab 15 - APIs and Dev Keys
+- file: 16-nasaapi02.md
+  title: Lab 16 - RESTful APIs and Dev Keys
+- file: 17-getpass.md
+  title: Lab 17 - Secure Password Retrieval
+- file: 18-paramikoSFTPunpw.md
+  title: Lab 18 - Paramiko SFTP with UN and PW
+- file: 19-paramikoSSHwithRSA.md
+  title: Lab 19 - Paramiko SSH with RSA
+- file: 20-paramikopipreq.md
+  title: Lab 20 - Scripting Commands over SSH
+- file: 21-argparse.md
+  title: Lab 21 - Argument Parsing
+- file: 22-makingexcel.md
+  title: Lab 22 - Making Excel Sheets
+- file: 23-readingexcel.md
+  title: Lab 23 - Reading Excel Sheets
+- file: 24-datetime.md
+  title: Lab 24 - import datetime
+- file: 25-datetime02.md
+  title: Lab 25 - Timestamping Data
+- file: 26-regex01.md
+  title: Lab 26 - RegEx to Check IP Address
+- file: 27-regex02.md
+  title: Lab 27 - Use RegEx to Search Text
+- file: 28-regex03.md
+  title: Lab 28 - re.findall(re.IGNORECASE)
+- file: 29-regex04.md
+  title: Lab 29 - re.sub()
+- file: 30-regex05.md
+  title: Lab 30 - re.compile()
+- file: 31-regex06.md
+  title: Lab 31 - Testing of a Match Exists
+- file: 32-sorted01.md
+  title: Lab 32 - Getting sorted()
+- file: 33-sorted02.md
+  title: Lab 33 - Custom sorted()
+- file: 34-sorted03.md
+  title: Lab 34 - Custom sorted() myFunct
+- file: 35-sorted04.md
+  title: Lab 35 - Sorting lists of dictionaries
+- file: 36-sorted05.md
+  title: Lab 36 - Sort Stability and Complex Sorts
+- file: 37-sorted06.md
+  title: Lab 37 - sort() vs sorted()
+- file: 38-csv01.md
+  title: Lab 38 - csv.reader()
+- file: 39-csv02.md
+  title: Lab 39 - csv.DictReader()
+- file: 40-csv03.md
+  title: Lab 40 - csv.DictWriter() writeheader() writerow()
+- file: 41-unpackargs.md
+  title: Lab 41 - Unpacking Argruments
+- file: 42-xml01.md
+  title: Lab 42 - XML Parsing with ElementTree
+- file: 43-sqlite01.md
+  title: Lab 43 - Learning sqlite3
+- file: 44-sqliteapp01.md
+  title: Lab 44 - Tracking API Data with sqlite3
+- file: 45-flaskapi01.md
+  title: Lab 45 - Building APIs with Python
+- file: 46-flaskapi02.md
+  title: Lab 46 - Flask APIs and Jinja2
+- file: 47-flaskapi03.md
+  title: Lab 47 - Flask APIs and Cookies
+- file: 48-flaskapi04.md
+  title: Lab 48 - Flask Sessions
+- file: 49-flaskapi05.md
+  title: Lab 49 - Flask Redirection and Errors
+- file: 50-flaskapi06.md
+  title: Lab 50 - Flask Uploading Files
+- file: 51-flaskapi07.md
+  title: Lab 51 - Connecting an API to a Database
+- file: 52-sqlflask.md
+  title: Lab 52 - Tracking Inventory with sqlite
+- file: 53-zipup.md
+  title: Lab 52 - Archive with zipfile
